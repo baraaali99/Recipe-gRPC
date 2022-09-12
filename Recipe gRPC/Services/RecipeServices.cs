@@ -1,11 +1,12 @@
-﻿using Grpc.Core;
-using Recipe_gRPC.protos;
-using Google.Protobuf;
+﻿using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
 using Newtonsoft.Json;
+using Recipe_gRPC.protos;
 
-/*namespace Recipe_gRPC.Services;
-	public class RecipeService : protos.RecipeService.RecipeServiceBase
-	{
+namespace Recipe_gRPC.Services
+{
+    public class RecipeServices : RecipeService.RecipeServiceBase
+    {
 		private static List<Recipe> s_recipesList = new();
 		private readonly string _recipesFile = "Recipes.json";
 
@@ -29,7 +30,7 @@ using Newtonsoft.Json;
 					s_recipesList.OrderBy(o => o.Title).ToList(), Formatting.Indented));
 		}
 
-		public override async Task<ListRecipesResponse> ListRecipes(Google.Protobuf.WellKnownTypes.Empty request, ServerCallContext context)
+		public override async Task<ListRecipesResponse> ListRecipes(Empty request, ServerCallContext context)
 		{
 			await LoadDataAsync();
 			ListRecipesResponse response = new();
@@ -96,5 +97,4 @@ using Newtonsoft.Json;
 			throw new RpcException(new Status(StatusCode.NotFound, msg));
 		}
 	}
-
-*/
+}

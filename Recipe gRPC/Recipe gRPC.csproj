@@ -20,7 +20,7 @@
 
   </ItemGroup>
     <ItemGroup>
-      <Protobuf Include="protos\RecipeCategory.proto" GrpcServices="Server" />
+      <Protobuf Include="protos\RecipeService.proto" GrpcServices="Server" />
       <Protobuf Include="protos\CategoryService.proto" GrpcServices="Server" />
       <Watch Include="*.proto" />
     </ItemGroup>

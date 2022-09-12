@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="Protos\Category.proto" />
+    <None Remove="Protos\Recipe.proto" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,7 +18,7 @@
   <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.21.5" />
     <PackageReference Include="Grpc.Net.Client" Version="2.47.0" />
-    <PackageReference Include="Grpc.Net.Client.Web" Version="2.47.0" />
+    <PackageReference Include="Grpc.Net.Client.Web" Version="2.48.0" />
     <PackageReference Include="Grpc.Net.ClientFactory" Version="2.47.0" />
     <PackageReference Include="Grpc.Tools" Version="2.48.0">
       <PrivateAssets>all</PrivateAssets>
@@ -26,6 +27,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Recipe gRPC\Recipe gRPC.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Protobuf Include="Protos\Category.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\Recipe.proto" GrpcServices="Client" />
   </ItemGroup>
 </Project>

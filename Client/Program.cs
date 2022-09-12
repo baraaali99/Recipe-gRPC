@@ -14,6 +14,14 @@ builder.Services.AddGrpcClient<CategoryService.CategoryServiceClient>(o =>
 }).ConfigurePrimaryHttpMessageHandler(
 		() => new GrpcWebHandler(new HttpClientHandler()));
 
+builder.Services.AddGrpcClient<RecipeService.RecipeServiceClient>(o =>
+{
+	//o.Address = new Uri(builder.Configuration["BaseUrl"]);
+	o.Address = new Uri("https://localhost:7134");
+}).ConfigurePrimaryHttpMessageHandler(
+		() => new GrpcWebHandler(new HttpClientHandler()));
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
