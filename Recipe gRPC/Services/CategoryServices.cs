@@ -20,7 +20,7 @@ namespace Recipe_gRPC.Services
 			if (File.Exists(_recipesFile))
 			{
 				var jsonRecipesString = await File.ReadAllTextAsync(_recipesFile);
-				_recipesList = JsonConvert.DeserializeObject<List<Recipe>>(jsonRecipesString)!;
+				_recipesList = JsonConvert.DeserializeObject<List<Recipe>>(jsonRecipesString)! ?? new List<Recipe>();
 			}
 			else
 			{
@@ -31,7 +31,7 @@ namespace Recipe_gRPC.Services
 			if (File.Exists(_categoriesFile))
 			{
 				var jsonCategoriesString = await File.ReadAllTextAsync(_categoriesFile);
-				_categoriesList = JsonConvert.DeserializeObject<List<string>>(jsonCategoriesString)!;
+				_categoriesList = JsonConvert.DeserializeObject<List<string>>(jsonCategoriesString)! ?? new List<string>();
 			}
 			else
 			{

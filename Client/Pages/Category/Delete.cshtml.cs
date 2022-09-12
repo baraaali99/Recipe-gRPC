@@ -8,7 +8,7 @@ namespace Client.Pages.Category
     {
 		[TempData]
 		public string? ActionResult { get; set; }
-		[FromRoute(Name = "Category")]
+		[FromRoute(Name = "category")]
 		public string Category { get; set; } = string.Empty;
 		private readonly CategoryService.CategoryServiceClient _categoryServiceClient;
 

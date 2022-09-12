@@ -46,7 +46,7 @@ namespace Client.Pages.Category
 			{
 				ActionResult = "Something went wrong, Try again later";
 			}
-			return RedirectToPage("./Index");
+			return RedirectToPage("./List");
 		}
 	}
 }
