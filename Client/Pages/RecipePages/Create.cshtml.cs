@@ -35,7 +35,7 @@ namespace Client.Pages.RecipePages
 			catch (Exception)
 			{
 				ActionResult = "Something went wrong please try again later";
-				return RedirectToPage("./Index");
+				return RedirectToPage("./List");
 			}
 		}
 
@@ -49,7 +49,7 @@ namespace Client.Pages.RecipePages
 			catch (Exception)
 			{
 				ActionResult = "Something went wrong please try again later";
-				return RedirectToPage("./Index");
+				return RedirectToPage("./List");
 			}
 
 			if (!ModelState.IsValid)
@@ -75,7 +75,7 @@ namespace Client.Pages.RecipePages
 			{
 				ActionResult = "Something went wrong please try again later";
 			}
-			return RedirectToPage("./Index");
+			return RedirectToPage("./List");
 		}
 		public async Task PopulateCategoriesAsync()
 		{
